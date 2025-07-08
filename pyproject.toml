@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "get-papers"
+version = "0.1.0"
+description = ""
+authors = ["phanindhraaa <suraphanindhra@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "get" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.4"
+lxml = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+get-papers-list = "get.cli:main"
