@@ -15,10 +15,10 @@ It saves the results (with industry authors only) to a CSV file for further anal
 # Installation (using Poetry)
 Make sure Python 3.12+ is installed.
 bash:
-git clone https://github.com/Phanindhraaa/get-papers-cli.git
-cd get-papers
-poetry init (select all defaults)
-poetry add requests lxml
+      git clone https://github.com/Phanindhraaa/get-papers-cli.git
+      cd get-papers
+      poetry init (select all defaults)
+      poetry add requests lxml
  
 # To Run
 bash:
