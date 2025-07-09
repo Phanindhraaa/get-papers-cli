@@ -44,16 +44,7 @@ Behind the Scenes The CLI tool:
           3.Uses keyword matching to detect: Academic affiliations: University, Hospital, .edu, etc.
                                              Company affiliations: Inc, Pharmaceutical, Biotech, etc.
           4.Only includes papers with at least one non-academic, company-affiliated author   
-          
-# Project Structure
-get-papers/
-├── get/
-│   ├── cli.py              # CLI entry point
-│   ├── parser.py           # Parses PubMed XML and filters papers
-│   ├── pubmed_client.py    # Handles API calls to PubMed
-│   └── utils.py            # Helpers: affiliation filters, CSV writer
-├── pyproject.toml          # Poetry config
-├── README.md               # You're reading it!
+
 
 
 Phanindhra Sura
