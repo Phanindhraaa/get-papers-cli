@@ -15,35 +15,35 @@ It saves the results (with industry authors only) to a CSV file for further anal
 # Installation (using Poetry)
 Make sure Python 3.12+ is installed.
 bash:
-      git clone https://github.com/Phanindhraaa/get-papers-cli.git
-      cd get-papers
-      poetry init (select all defaults)
-      poetry add requests lxml
+      -git clone https://github.com/Phanindhraaa/get-papers-cli.git
+      -cd get-papers
+      -poetry init (select all defaults)
+      -poetry add requests lxml
  
 # To Run
 bash:
 poetry run get-papers-list QUERY [-f results.csv] [-d]
          
-         -QUERY	Your PubMed search keyword (e.g. cancer, brain)
-         -f filename.csv	(Optional) Save results to CSV instead of printing
-         -d	(Optional) Enable debug logging
+         1.QUERY Your PubMed search keyword (e.g. cancer, brain)
+         2.-f filename.csv	(Optional) Save results to CSV instead of printing
+         3.-d	(Optional) Enable debug logging
 
 # Example
 bash:
-poetry run get-papers-list cancer -f results.csv -d
+ -poetry run get-papers-list cancer -f results.csv -d
 
-          -Searches PubMed for "cancer"
-          -Filters only industry-affiliated authors
-          -Saves results to results.csv
-          -Shows debug logs in the terminal
+          1.Searches PubMed for "cancer"
+          2.Filters only industry-affiliated authors
+          3.Saves results to results.csv
+          4.Shows debug logs in the terminal
           
 Behind the Scenes The CLI tool:
 
-          -Calls PubMed's E-Utilities API to search and fetch paper metadata
-          -Parses the XML using lxml
-          -Uses keyword matching to detect: 1.Academic affiliations: University, Hospital, .edu, etc.
-                                            2.Company affiliations: Inc, Pharmaceutical, Biotech, etc.
-          -Only includes papers with at least one non-academic, company-affiliated author   
+          1.Calls PubMed's E-Utilities API to search and fetch paper metadata
+          2.Parses the XML using lxml
+          3.Uses keyword matching to detect: Academic affiliations: University, Hospital, .edu, etc.
+                                             Company affiliations: Inc, Pharmaceutical, Biotech, etc.
+          4.Only includes papers with at least one non-academic, company-affiliated author   
           
 # Project Structure
 get-papers/
