@@ -1,0 +1,69 @@
+# get-papers
+
+A Python CLI tool to **fetch PubMed papers** related to a search query, and **filter out papers that only have academic authors**. 
+It saves the results (with industry authors only) to a CSV file for further analysis.
+
+# Features
+
+-  Search PubMed using a keyword
+-  Parse XML metadata for papers
+-  Filter out academic-only affiliations (like universities, hospitals)
+-  Only include papers with at least **one author from a pharma/biotech/company**
+-  Save results to a CSV file or print to terminal
+-  Modular and testable code structure
+
+# Installation (using Poetry)
+Make sure Python 3.12+ is installed.
+bash:
+git clone https://github.com/Phanindhraaa/get-papers-cli.git
+cd get-papers
+poetry init (select all defaults)
+poetry add requests lxml
+ 
+# To Run
+bash:
+poetry run get-papers-list QUERY [-f results.csv] [-d]
+         
+         -QUERY	Your PubMed search keyword (e.g. cancer, brain)
+         -f filename.csv	(Optional) Save results to CSV instead of printing
+         -d	(Optional) Enable debug logging
+
+# Example
+bash:
+poetry run get-papers-list cancer -f results.csv -d
+
+          -Searches PubMed for "cancer"
+          -Filters only industry-affiliated authors
+          -Saves results to results.csv
+          -Shows debug logs in the terminal
+          
+Behind the Scenes The CLI tool:
+
+          -Calls PubMed's E-Utilities API to search and fetch paper metadata
+          -Parses the XML using lxml
+          -Uses keyword matching to detect: 1.Academic affiliations: University, Hospital, .edu, etc.
+                                            2.Company affiliations: Inc, Pharmaceutical, Biotech, etc.
+          -Only includes papers with at least one non-academic, company-affiliated author   
+          
+# Project Structure
+get-papers/
+├── get/
+│   ├── cli.py              # CLI entry point
+│   ├── parser.py           # Parses PubMed XML and filters papers
+│   ├── pubmed_client.py    # Handles API calls to PubMed
+│   └── utils.py            # Helpers: affiliation filters, CSV writer
+├── pyproject.toml          # Poetry config
+├── README.md               # You're reading it!
+
+
+Phanindhra Sura
+Email: suraphanindhra@gmail.com
+GitHub: https://github.com/Phanindhraaa
+
+
+                                           
+          
+         
+
+
+
