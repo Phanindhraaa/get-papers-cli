@@ -29,17 +29,16 @@ def parse_pubmed_response(xml_data: str) -> List[Dict[str, str]]:
                 email = extract_email(affiliation_info)
 
                 if affiliation_info:
-                    # Only include authors whose affiliation is NOT academic
-                    if not is_academic(affiliation_info):
+                    # Require BOTH: non-academic AND company affiliation
+                    if not is_academic(affiliation_info) and is_company_affiliated(affiliation_info):
                         non_academic_authors.append(get_author_name(author))
-                    if is_company_affiliated(affiliation_info):
                         company_affiliations.append(affiliation_info)
 
-                if not corresponding_email and email:
-                    corresponding_email = email
+                    if not corresponding_email and email:
+                        corresponding_email = email
 
-            # Only keep papers with at least one company affiliation
-            if company_affiliations:
+            # Only include papers with valid non-academic company authors
+            if company_affiliations and non_academic_authors:
                 papers.append({
                     "PubmedID": pmid,
                     "Title": title,
