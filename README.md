@@ -14,19 +14,19 @@ It saves the results (with industry authors only) to a CSV file for further anal
 
 # Installation (using Poetry)
 Make sure Python 3.12+ is installed.
-bash:
+       bash:
       -git clone https://github.com/Phanindhraaa/get-papers-cli.git
       -cd get-papers
       -poetry init (select all defaults)
       -poetry add requests lxml
  
 # To Run
-bash:
-poetry run get-papers-list QUERY [-f results.csv] [-d]
+      bash:
+     -poetry run get-papers-list QUERY [-f results.csv] [-d]
          
-         1.QUERY Your PubMed search keyword (e.g. cancer, brain)
-         2.-f filename.csv	(Optional) Save results to CSV instead of printing
-         3.-d	(Optional) Enable debug logging
+QUERY Your PubMed search keyword (e.g. cancer, brain), -f filename.csv (Optional) Save results to CSV instead of printing, -d(Optional) Enable debug logging
+         
+        
 
 # Example
 bash:
