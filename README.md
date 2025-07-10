@@ -1,7 +1,7 @@
 # get-papers
 
-A Python CLI tool to **fetch PubMed papers** related to a search query, and **filter out papers that only have academic authors**. 
-It saves the results (with industry authors only) to a CSV file for further analysis.
+writing a python program to fetch research papers based on a user-specified query. the program will identify papers with at least one author affiliated with a pharmaceutical or biotech company and return the results as a csv file.
+
 
 # Features
 
