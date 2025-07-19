@@ -12,16 +12,13 @@ writing a python program to fetch research papers based on a user-specified quer
 -  Save results to a CSV file or print to terminal
 -  Modular and testable code structure
 
-# Installation (using Poetry)
+# To Run
 bash:
 -git clone https://github.com/Phanindhraaa/get-papers-cli.git
 -cd get-papers
 -poetry init (select all defaults)
 -poetry add requests lxml
- 
-# To Run
-      bash:
-     -poetry run get-papers-list QUERY [-f results.csv] [-d]
+-poetry run get-papers-list QUERY [-f results.csv] [-d]
          
 QUERY Your PubMed search keyword (e.g. cancer, brain), -f filename.csv (Optional) Save results to CSV instead of printing, -d(Optional) Enable debug logging
          
