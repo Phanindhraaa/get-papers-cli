@@ -13,7 +13,6 @@ writing a python program to fetch research papers based on a user-specified quer
 -  Modular and testable code structure
 
 # Installation (using Poetry)
-Make sure Python 3.12+ is installed.
 bash:
 -git clone https://github.com/Phanindhraaa/get-papers-cli.git
 -cd get-papers
